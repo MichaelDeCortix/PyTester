@@ -2,7 +2,7 @@ import requests
 from rich.console import Console
 from rich.theme import Theme
 import curlify
-from widgets.display_and_copy import display_and_copy
+from pytester.widgets.display_and_copy import display_and_copy
 
 # Syntax highlighting with Rich
 # https://rich.readthedocs.io/en/stable/appendix/colors.html
@@ -15,7 +15,6 @@ console = Console(
         }
     )
 )
-
 
 # Sending a request using requests
 def request(method, url, headers=None, data=None):

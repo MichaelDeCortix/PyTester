@@ -4,8 +4,7 @@ setup(
     name="pytester",
     version="0.1",
     url="https://github.com/MichaelDeCortix/pyTester",
-    author="MiDeCo",
-    author_email="@gmail.com",
+    author="MichaelDeCortix",
     description="Description of my package",
     install_requires=[
         "ipywidgets >= 7.5.1",
