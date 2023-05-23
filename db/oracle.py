@@ -10,7 +10,7 @@ def oracle_exec(query, jdbc=None, **kwargs):
     host = kwargs.get("host", None)
     port = kwargs.get("port", None)
     service_name = kwargs.get("service_name", None)
-    
+
     # if jdbc string is provided, extract connection details from it
     if jdbc is not None:
         match = re.match(

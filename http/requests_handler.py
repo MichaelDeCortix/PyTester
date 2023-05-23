@@ -4,7 +4,7 @@ from rich.theme import Theme
 import curlify
 from widgets.display_and_copy import display_and_copy
 
-# Подсветка синтаксиса json
+# Syntax highlighting with Rich
 # https://rich.readthedocs.io/en/stable/appendix/colors.html
 console = Console(
     theme=Theme(
@@ -16,7 +16,8 @@ console = Console(
     )
 )
 
-# Отправка запроса через requests
+
+# Sending a request using requests
 def request(method, url, headers=None, data=None):
     try:
         response = requests.request(method, url, headers=headers, data=data)
@@ -28,7 +29,7 @@ def request(method, url, headers=None, data=None):
                 # rich.print_json(json.dumps(response.json(), indent=4, sort_keys=True))
                 console.print_json(response.text)
             except:
-                print('Body:\n' + response.text)
+                print("Body:\n" + response.text)
         display_and_copy(curlify.to_curl(response.request))
         return response
     except requests.exceptions.ConnectionError as e:
