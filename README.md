@@ -1,4 +1,4 @@
-# PyTester
+# pyTester
 
 #### *[The project is currently under development and is not intended for use at the moment]*
 #### Status: It works, you can use it.
