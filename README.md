@@ -1,6 +1,6 @@
 # pyTester
 
-#### *[The project is currently under development and is not intended for use at the moment]*
+#### *[The project is currently under development]*
 #### Status: It works, you can use it.
 
 ## Installation
