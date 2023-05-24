@@ -13,8 +13,8 @@ def oracle_exec(query, conn_str=None, **kwargs):
 
     # setup connection details
     patterns = [
-        r"oracle://(?P<user>\w+):(?P<password>\w+)@(?P<host>[\w\.]+):(?P<port>\d+)/(?P<service_name>\w+)",
-        r"jdbc:oracle:thin:(?P<user>\w+)/(?P<password>\w+)@(?P<host>[\w\.]+):(?P<port>\d+)/(?P<service_name>\w+)",
+        r"oracle://(?P<user>[^:]*):(?P<password>[^@]*)@(?P<host>[^:]*):(?P<port>\d+)/(?P<service_name>.*)",
+        r"jdbc:oracle:thin:(?P<user>[^/]*):(?P<password>[^@]*)@(?P<host>[^:]*):(?P<port>\d+)/(?P<service_name>.*)"
     ]
 
     # if a connection string is provided, extract connection details from it

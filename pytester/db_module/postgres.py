@@ -13,9 +13,9 @@ def postgre_exec(query, conn_str=None, **kwargs):
 
     # setup connection details
     patterns = [
-        r"postgresql://(?P<user>\w+):(?P<password>\w+)@(?P<host>[\w\.]+):(?P<port>\d+)/(?P<database>\w+)",
-        r"jdbc:postgresql://(?P<host>[\w\.]+):(?P<port>\d+)/(?P<database>\w+)(\?user=(?P<user>\w+)&password=(?P<password>\w+))?",
-        r"postgres://(?P<user>\w+):(?P<password>\w+)@(?P<host>[\w\.]+):(?P<port>\d+)/(?P<database>[\w\-.]+)",
+        r"postgresql://(?P<user>[^:]*):(?P<password>[^@]*)@(?P<host>[^:]*):(?P<port>\d+)/(?P<database>.*)",
+        r"jdbc:postgresql://(?P<host>[^:]*):(?P<port>\d+)/(?P<database>.*)(\?user=(?P<user>[^&]*)&password=(?P<password>.*))?",
+        r"postgres://(?P<user>[^:]*):(?P<password>[^@]*)@(?P<host>[^:]*):(?P<port>\d+)/(?P<database>.*)"
     ]
 
     # if a connection string is provided, extract connection details from it
