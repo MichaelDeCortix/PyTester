@@ -4,5 +4,5 @@ from .http_module.requests_handler import request
 from .widgets.display_and_copy import display_and_copy
 from .utils.files import find_file
 
-__version__ = "0.1.0"
+__version__ = "0.0.2"
 __author__ = "MiDeCo"
